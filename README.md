@@ -12,7 +12,7 @@
 
 This repo contains a minimal python package and two plugins to understand how python plugins work.  I was reading about the [different ways to create plugins](https://packaging.python.org/en/latest/guides/creating-and-discovering-plugins/) and decided to try out the [namespace](https://packaging.python.org/en/latest/guides/packaging-namespace-packages/) approach.  
 
-I found the documentation to be confusing on its own, so I decided to create a minimal example to clarify things for me.
+I found the documentation to be confusing, so I decided to create a minimal example to clarify things for me.
 
 ## Instructions
 
