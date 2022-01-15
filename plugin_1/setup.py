@@ -8,5 +8,5 @@ setup(
     author='Hamel Husain',
     author_email='satya@microsoft.com',
     license='Apache Software License',
-    packages=find_namespace_packages(include=['fake_package.plugins.*']),
+    packages=find_namespace_packages(include=['fake_package.*']),
 )

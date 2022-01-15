@@ -17,6 +17,6 @@ setuptools.setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    packages=setuptools.find_packages(),
+    packages=setuptools.find_packages()+setuptools.find_namespace_packages(include=["fake_package.*"]),
     python_requires=">=3.6",
 )
