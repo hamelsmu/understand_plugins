@@ -1,8 +1,22 @@
-Notes on plugins with namespace packages
+# Python Plugin Notes
 
-Instructions
+## What is a plugin?
 
-Install the main package and the plugins:
+[Plugins](https://en.wikipedia.org/wiki/Plug-in_(computing)) are a way to add additoinal functionality to a python package without interfering with the main package.  For example, the [datasette project has plugins](https://docs.datasette.io/en/stable/plugins.html) for various types of additional functionality.  Plugins are useful when:
+
+- You want to keep the main package clean and simple, but allow people to install more things depending on the features they desire.
+- Make your package more extensible.  You can add more functionality to your package without having to change the main package.
+- Provide a way for third parties to create add-ons to your package.
+
+## Background
+
+This repo contains a minimal python package and two plugins to understand how python plugins work.  I was reading about the [different ways to create plugins](https://packaging.python.org/en/latest/guides/creating-and-discovering-plugins/) and decided to try out the [namespace](https://packaging.python.org/en/latest/guides/packaging-namespace-packages/) approach.  
+
+I found the documentation to be confusing on its own, so I decided to create a minimal example to clarify things for me.
+
+## Instructions
+
+Install the main package and the two plugins:
 
 ```py
 cd main_package
@@ -18,7 +32,7 @@ After you do this, you can test that the plugins are available as follows.  **Wa
 ```py
 # the plugin that is in the main package
 >>> from fake_package.plugins import ns_pkg
-this is the ns pkg in the main pkg
+'this is the ns pkg in the main pkg'
 
 # plugin_1
 >>> from fake_package.plugins import a
@@ -30,4 +44,3 @@ this is the ns pkg in the main pkg
 >>> b()
 'wohoo you have a different plugin!'
 ```
-
